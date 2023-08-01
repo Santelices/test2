@@ -1,0 +1,23 @@
+/* styles.css */
+.container-fluid {
+    background-color: red;
+}
+
+.card {
+    background-color: white;
+}
+
+.card-title {
+    color: red;
+}
+
+/* Cambiar el color de los botones */
+.btn-success {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-secondary {
+    background-color: red;
+    border-color: red;
+}

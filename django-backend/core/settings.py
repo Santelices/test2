@@ -50,8 +50,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'seguridad',
-    'inventario',
-    'venta',
+    'panel'
 ]
 
 INSTALLED_APPS = INSTALLED_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -95,7 +94,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get("DB_ENGINE", "django.db.backends.postgresql"),
-        'NAME': os.environ.get("DB_DATABASE", "db-central-local"),
+        'NAME': os.environ.get("DB_DATABASE", "testpractico"),
         'USER': os.environ.get("DB_USER", "postgres"),
         'PASSWORD': os.environ.get("DB_PASSWORD", "123"),
         'HOST': os.environ.get("DB_HOST", "localhost"),
