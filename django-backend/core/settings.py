@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': os.environ.get("DB_ENGINE", "django.db.backends.postgresql"),
         'NAME': os.environ.get("DB_DATABASE", "testpractico"),
         'USER': os.environ.get("DB_USER", "postgres"),
-        'PASSWORD': os.environ.get("DB_PASSWORD", "123"),
+        'PASSWORD': os.environ.get("DB_PASSWORD", "hola"),
         'HOST': os.environ.get("DB_HOST", "localhost"),
         'PORT': os.environ.get("DB_PORT", "5432"),
         'ATOMIC_REQUESTS': True

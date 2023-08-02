@@ -63,12 +63,15 @@
                         <td>{{ p.id_alumno }}</td>
                         <td>{{ p.Nombres }}</td>
                         <td>
-                        <a class="btn btn-danger"  href="panel/form-profesor-actualizar" >
+                        <a class="btn btn-danger" href="{% url 'form-alumno-editar' p.id_alumno %}">
+
                             <i class="fa fa-plus-circle"  > </i> Editar
                         </a>
-                            <button type="button" class="btn btn-warning"   >eliminar</button>
+                        <a class="btn btn-warning" href="{% url 'form-alumno-eliminar' p.id_alumno %}">
+                            <i class="fa fa-trash"></i> Eliminar
+                        </a>
                         </td>
-            
+
                     </tr>
                 {% endfor %}
             </tbody>

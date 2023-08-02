@@ -62,12 +62,18 @@
                     <tr>
                         <td>{{ p.id_profesor }}</td>
                         <td>{{ p.nombre_profesor }}</td>
-                        <td><button type="button" class="btn btn-danger">Eliminar</button>
-                            <button type="button" class="btn btn-warning">Editar</button>
+                        <td>
+                        <a class="btn btn-danger" href="{% url 'form-profesor-editar' p.id_profesor %}">
+
+                            <i class="fa fa-plus-circle"> </i> Editar
+                        </a>
+                        <a class="btn btn-warning" href="{% url 'form-profesor-eliminar' p.id_profesor %}">
+                            <i class="fa fa-trash"></i> Eliminar
+                        </a>
                         </td>
                     </tr>
-                    
-                    
+
+
 
                 {% endfor %}
             </tbody>
