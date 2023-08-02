@@ -12,6 +12,6 @@ urlpatterns = [
     path('profesores', ProfesorListView.as_view(), name='profesores'),
     path('panel/form-profesor/', ProfesorCreateView.as_view(), name='form-profesor'),
     path('panel/form-profesor/<str:pk>/', ProfesorUpdateView.as_view(), name='form-profesor-editar'),
-    path('panel/confirm_delete_profesor/<str:pk>/', ProfesorDeleteView.as_view(), name='form-profesor-eliminar'),
+    path('panel/confirm_delete/<str:pk>/', ProfesorDeleteView.as_view(), name='form-profesor-eliminar'),
 
 ]
