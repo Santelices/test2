@@ -117,20 +117,26 @@ class ProfesorDeleteView(LoginRequiredMixin, DeleteView):
     login_url = '/seguridad/login/'
     redirect_field_name = 'redirect_to'
     model = Profesor
-    template_name = 'panel/confirm_delete.html'
-    success_url = reverse_lazy('profesores')  # Redirigir a la lista de alumnos después de eliminar uno
+    template_name = 'panel/confirm_delete_profesor.html'
 
     def get_object(self, queryset=None):
         pk = self.kwargs.get('pk')
-        return get_object_or_404(Profesor, pk=pk)
+        return get_object_or_404(Profesor, id=pk)
+
+    def get_success_url(self):
+         return '/panel/profesores'
+
 
 class AlumnoDeleteView(LoginRequiredMixin, DeleteView):
     login_url = '/seguridad/login/'
     redirect_field_name = 'redirect_to'
     model = Alumno
     template_name = 'panel/confirm_delete.html'
-    success_url = reverse_lazy('Alumnos')  # Redirigir a la lista de alumnos después de eliminar uno
 
     def get_object(self, queryset=None):
         pk = self.kwargs.get('pk')
-        return get_object_or_404(Alumno, pk=pk)
+        return get_object_or_404(Alumno, id=pk)
+
+
+    def get_success_url(self):
+         return '/panel/alumnos'
